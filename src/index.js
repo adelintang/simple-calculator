@@ -1,4 +1,5 @@
 import { handlerClick, handlerKeyDown } from "./app/handler.service.js";
+import "./style.css";
 
 const operation = document.querySelector('.operation');
 const button = document.querySelectorAll('button');

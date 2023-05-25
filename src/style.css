@@ -1,3 +1,13 @@
+:root {
+  --font-color: #eaeaea;
+  --title-color: #D1DED3;
+  --box-color: #323E45;
+  --button-color: #3A4E51;
+  --shadow-color: rgba(0, 0, 0, .5);
+  --first-gradien-color: #DA22FF;
+  --second-gradien-color: #9733EE;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -12,23 +22,23 @@ body {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  background: linear-gradient(90deg, #DA22FF, #9733EE);
+  background: linear-gradient(90deg, var(--first-gradien-color), var(--second-gradien-color));
 }
 
 .container h1 {
   text-align: center;
-  color: #D1DED3;
+  color: var(--title-color);
 }
 
 .container .box {
   width: 20%;
   min-width: 380px;
-  background-color: #323E45;
+  background-color: var(--box-color);
   gap: 4px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   border-radius: 5px;
-  box-shadow: 5px 5px 8px 3px rgba(0, 0, 0, .5);
+  box-shadow: 5px 5px 8px 3px var(--shadow-color);
   box-sizing: border-box;
 }
 
@@ -40,11 +50,11 @@ input {
   border: 0;
   outline: 0;
   text-align: right;
-  background-color: #323E45;
+  background-color: var(--box-color);
   box-sizing: border-box;
   border-radius: 5px;
   font-size: 2rem;
-  color: #eaeaea;
+  color: var(--font-color);
 }
 
 .button {
@@ -52,14 +62,14 @@ input {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  background-color: #3A4E51;
+  background-color: var(--button-color);
   font-size: 1.2rem;
   box-sizing: border-box;
-  color: #eaeaea;
+  color: var(--font-color);
 }
 
 .button:hover {
-  color:  #DA22FF;
+  color:  var(--first-gradien-color);
 }
 
 /* reponsive breakpoint */
@@ -68,7 +78,7 @@ input {
     width: 100%;
   }
   .container .box {
-    box-shadow: 0 5px 8px 3px rgba(0, 0, 0, .5);
+    box-shadow: 0 5px 8px 3px var(--shadow-color);
   }
   input {
     padding: 0.9em 0.1em;
